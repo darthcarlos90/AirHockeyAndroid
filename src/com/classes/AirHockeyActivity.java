@@ -33,7 +33,7 @@ public class AirHockeyActivity extends Activity {
 				|| Build.MODEL.contains("Emulator"));
 		if(supportEs2){
 			glSurfaceView.setEGLContextClientVersion(2);
-			glSurfaceView.setRenderer(new AirHockeyRenderer());
+			glSurfaceView.setRenderer(new AirHockeyRenderer(this));
 			rendererSet = true;
 		} else {
 			Toast.makeText(this, "No support for OpenGlES2.0 :(", Toast.LENGTH_LONG).show();
